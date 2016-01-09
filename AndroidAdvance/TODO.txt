@@ -1,0 +1,99 @@
+﻿EventBus查一下
+http://blog.csdn.net/harvic880925/article/details/40660137
+http://www.cnblogs.com/angeldevil/p/3715934.html
+
+StackTraceElement  LogUtil工具类下面的  这个打印堆栈信息是为了什么  不是很清楚
+http://www.2cto.com/kf/201408/328680.html
+网址：http://blog.csdn.net/allen_zhao_2012/article/details/7865163
+
+ActivityClearer中的有关Iterator相关的东西看一下  忘记了一些有关迭代器的东西
+clearAllExcept方法中的相关的东西也要看一下  迭代着清空集合也忘记了 
+
+
+Android按键事件处理流程 -- KeyEvent
+http://www.cnblogs.com/zhaoxiaowei/p/3803301.html?utm_source=tuicool
+// 拦截按键操作
+    @Override
+    public boolean dispatchKeyEvent(KeyEvent event) {
+        if (event.getKeyCode() == KeyEvent.KEYCODE_BACK) {
+            //注意在if判断中要加一个event.getAction() == KeyEvent.ACTION_DOWN判断，
+            //因为按键有两个事件ACTION_DOWN和ACTION_UP，也就是按下和松开，
+            //如果不加这个判断，代码会执行两遍
+            // 如果只有actiondown这个的话也是执行两遍，但是第二遍比第一遍执行慢上一会
+            // 只有event.getRepeatCount() == 0的时候也是两遍，按下显示一个，抬起显示一个
+            if (event.getAction() == KeyEvent.ACTION_DOWN && event.getRepeatCount() == 0) {
+                //onBackPressed();
+                Log.e("haha","用户点击了返回键");
+                // 如果不添加外层判断的话就会出现慢慢点弹两次（一快一慢），松手再弹一次
+                // 快速点击的就是走两遍
+            }
+            return true;
+        }
+        return super.dispatchKeyEvent(event);
+    }
+
+
+腾讯的bug测试平台  挺好用的感觉
+http://bugly.qq.com/introduction
+
+
+有关应用的静默安装和卸载相关的东西，还有临时获取root权限相关的东西
+http://blog.csdn.net/jiangwei0910410003/article/details/36427963
+http://www.cnphp6.com/archives/70549
+
+与Activity组件关联的上下文信息的获取方法(外部存储路径，资源路径)
+http://book.51cto.com/art/201205/337538.htm
+
+Android 沉浸式状态栏攻略 让你的状态栏变色吧  这部分知识应该和Android5.0的知识关联起来看
+http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0922/3495.html
+
+
+volley相关的复习一下，以后就用volley了==================================================继续研究volley，然后看公司的代码===============
+http://www.androidchina.net/2965.html
+
+
+
+注解的东西  还得不停的学  涉及到反射相关的知识，抓紧复习一下
+android的注解annation的使用方法
+http://www.cnblogs.com/pepcod/archive/2013/02/16/2913474.html
+http://www.cnblogs.com/peida/archive/2013/04/24/3036689.html
+
+
+
+竖直滚动的ViewPager，有时间研究一下
+http://blog.csdn.net/xyz_lmn/article/details/38906363
+http://blog.csdn.net/way_ping_li/article/details/9359191
+http://gundumw100.iteye.com/blog/2004804
+
+
+向这个项目贡献代码，争取做到最活跃的提交者
+https://github.com/tangqi92/Android-Tips#v
+
+
+不同版本上面选择系统图库的问题
+总结这个问题，公司的客户端里面用户选择头像那里的代码也是很好的，争取弄成这个 把他们的代码总结好了之后发成博客来弄(他们的代码是可以完成这个识别的，所以好好弄)
+http://blog.csdn.net/tempersitu/article/details/20557383
+http://stackoverflow.com/questions/9080109/android-image-picker-for-local-files-only
+-----------------------------------------------------------------------------------------------------------------
+file:///storage/emulated/0/quchifan/images/temp/20150928_162324.jpg  平板的log
+
+content://media/external/images/media/100670  MX3上面的log
+
+content://com.android.providers.media.documents/document/image%3A17134  三星log
+--------------------------------------------------------------------------------------不同的设备返回的东西不同，应该好好弄一下这个！！--------
+
+
+
+StrictMode 严苛模式
+http://blog.csdn.net/tonyfield2015/article/details/8238251
+
+
+超级干货！深聊MATERIAL DESIGN复杂响应式设计
+http://www.uisdc.com/material-design-responsive-design#
+
+
+java注解是怎么实现的
+http://www.zhihu.com/question/24401191
+
+金山卫士开源计划
+http://code.ijinshan.com/index.html

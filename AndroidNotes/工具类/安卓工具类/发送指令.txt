@@ -1,0 +1,10 @@
+out = process.getOutputStream();
+out.write(("am start -a android.intent.action.VIEW -n com.android.browser/com.android.browser.BrowserActivity\n").getBytes());
+out.flush();
+
+InputStream in = process.getInputStream();
+BufferedReader re = new BufferedReader(new InputStreamReader(in));
+String line = null;
+while((line = re.readLine()) != null) {
+    Log.d("conio","[result]"+line);
+}

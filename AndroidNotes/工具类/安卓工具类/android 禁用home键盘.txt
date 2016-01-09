@@ -1,0 +1,45 @@
+        问题的提出
+         Android Home键系统负责监听，捕获后系统自动处理。有时候，系统的处理往往不随我们意，想自己处理点击Home后的事件，那怎么办？
+
+ 
+
+        问题的解决
+         先禁止Home键，再在onKeyDown里处理按键值，点击Home键的时候就把程序关闭，或者随你XXOO。
+
+ 
+
+@Override
+
+ public boolean onKeyDown(int keyCode, KeyEvent event)
+
+{ // TODO Auto-generated method stub
+
+  if(KeyEvent.KEYCODE_HOME==keyCode)
+
+    android.os.Process.killProcess(android.os.Process.myPid());
+
+     return super.onKeyDown(keyCode, event);
+
+  }
+
+ 
+
+@Override
+
+ public void onAttachedToWindow()
+
+ { // TODO Auto-generated method stub
+
+    this.getWindow().setType(WindowManager.LayoutParams.TYPE_KEYGUARD);
+
+    super.onAttachedToWindow();
+
+ }
+
+ 
+
+ 
+
+加权限禁止Home键
+
+<uses-permission android:name="android.permission.DISABLE_KEYGUARD"></uses-permission>

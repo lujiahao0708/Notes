@@ -1,0 +1,9 @@
+1、//隐藏软键盘   
+
+((InputMethodManager)getSystemService(INPUT_METHOD_SERVICE)).hideSoftInputFromWindow(WidgetSearchActivity.this.getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);   
+
+  
+
+2、//显示软键盘,控件ID可以是EditText,TextView   
+
+((InputMethodManager)getSystemService(INPUT_METHOD_SERVICE)).showSoftInput(控件ID, 0); 
