@@ -15,3 +15,12 @@
 >本篇内容截取自《》和《》，同时还有亲身实践。
 
 
+
+
+gitbook
+http://my.oschina.net/waylau/blog/355179
+https://help.gitbook.com/format/chapters.html
+http://jingyan.baidu.com/article/e8cdb32b33e8f637052bada8.html
+http://4006024680.com/cgi-bin/turbo/admin_web/system/net_detect_2?url=http://dockerpool.com/static/books/gitbook_cn/book/file.html
+
+gitbook的summary中的目录不能有中文不然是不能访问的
