@@ -84,6 +84,9 @@ http://unclechen.github.io/2015/10/22/Android Studio Gradle实践之多渠道自
 http://unclechen.github.io/2015/10/25/Gradle实践之打包jar+Log开关自动关闭/
 
 
+http://chinagdg.org/2016/01/picking-your-compilesdkversion-minsdkversion-targetsdkversion/
+https://www.udacity.com/course/android-development-for-beginners--ud837
+
 
 EditText输入电话号码、银行卡号自动添加空格分割 
 http://www.devstore.cn/code/info/1396.html
