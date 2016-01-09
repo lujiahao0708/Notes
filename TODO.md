@@ -76,7 +76,12 @@ http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/1110/3667.html
 as提取样式的快捷键
 
 
-
+http://android.jobbole.com/82335/
+http://blog.csdn.net/xiaomoit/article/details/50469810
+http://gudong.name/technology/2015/10/13/github-usage.html
+http://blog.isming.me/2016/01/09/chang-android-statusbar-text-color/
+http://unclechen.github.io/2015/10/22/Android Studio Gradle实践之多渠道自动化打包+版本号管理/
+http://unclechen.github.io/2015/10/25/Gradle实践之打包jar+Log开关自动关闭/
 
 
 
