@@ -1,6 +1,5 @@
 http://lvable.com/?p=104   svg in Android  这个用来代替图片很好用的
 
-
 alt键   as中多行选择
 
 封装网络框架
@@ -14,10 +13,8 @@ http://android.jobbole.com/81564/
 
 把右边那个圆角图片弄好
 
-
 http://toughcoder.net/blog/2014/10/22/effective-android-ui-architecture/                  Android应用UI架构 Activity Fragment
 http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0427/2806.html
-
 
 漂亮的转换动画
 https://github.com/hujiaweibujidao/FabDialogMorph/tree/master/app/src/main/java/io/fabdialogmorph
@@ -30,10 +27,8 @@ http://www.jianshu.com/p/8ca27934c6e6#
 Activity设置singleTask无法通过Intent获取值的问题
 http://blog.csdn.net/lvxiangan/article/details/43084633
 
-
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!多重json嵌套的问题!!!!!!!!!!!!!!!!!!
 [{},{},{}]这种类型的json怎么解析
-
 
 Android使用Fragment打造万能页面切换框架
 http://blog.csdn.net/sbsujjbcy/article/details/47060211
@@ -72,9 +67,7 @@ http://www.cnblogs.com/LIANQQ/p/3732649.html
 Android实战之你应该使用哪个网络库？
 http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/1110/3667.html
 
-
 as提取样式的快捷键    as多行编辑快捷键
-
 
 http://android.jobbole.com/82335/
 http://blog.csdn.net/xiaomoit/article/details/50469810
@@ -98,15 +91,17 @@ http://www.devstore.cn/code/info/1368.html
 https://www.udacity.com/course/android-development-for-beginners--ud837
 
 
-
 http://chinagdg.org/2015/12/google-推出的-31-套在线课程/
 http://chinagdg.org/2016/01/picking-your-compilesdkversion-minsdkversion-targetsdkversion/
 
 http://www.cnblogs.com/surge/p/3859762.html
-
 
 http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0520/2897.html
 
 bug追踪
 http://www.androidweekly.cn/android-dev-weekly-issue-64/
 https://github.com/macroday/AppCrashTracker
+
+
+一个优秀的Android应用从建项目开始
+http://android.jobbole.com/82346/
