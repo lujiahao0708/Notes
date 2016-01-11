@@ -105,3 +105,8 @@ https://github.com/macroday/AppCrashTracker
 
 一个优秀的Android应用从建项目开始
 http://android.jobbole.com/82346/
+
+720的  px除以2
+1080   px除以3
+
+引导页需要特殊适配  不然缩放会出问题  一般切两套图片
