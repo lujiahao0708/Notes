@@ -24,7 +24,7 @@
     
         signingConfigs {
             debug {
-                storeFile file("debug.keystore")// keystore存放
+                storeFile file("debug.keystore")// keystore存放位置
             }
         }
     }
