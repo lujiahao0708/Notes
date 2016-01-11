@@ -73,7 +73,7 @@ Android实战之你应该使用哪个网络库？
 http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/1110/3667.html
 
 
-as提取样式的快捷键
+as提取样式的快捷键    as多行编辑快捷键
 
 
 http://android.jobbole.com/82335/
