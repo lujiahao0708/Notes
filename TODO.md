@@ -96,3 +96,10 @@ AVLoadingIndicatorView各种加载效果
 http://www.devstore.cn/code/info/1368.html
 
 https://www.udacity.com/course/android-development-for-beginners--ud837
+
+
+
+http://chinagdg.org/2015/12/google-推出的-31-套在线课程/
+http://chinagdg.org/2016/01/picking-your-compilesdkversion-minsdkversion-targetsdkversion/
+
+http://www.cnblogs.com/surge/p/3859762.html
