@@ -7,6 +7,7 @@
 ## 3.安装
 - 安装nodejs环境，安装完成后在命令行输入：`node -v`查看是否成功
 - 输入命令，全局安装gitbook：`npm install gitbook-cli -g`
+- 安装完之后，你可以检验下是否安装成功：`gitbook -V`
 ## 4.初始化
 
 ## 5.命令
