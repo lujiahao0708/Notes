@@ -106,3 +106,7 @@ http://www.cnblogs.com/surge/p/3859762.html
 
 
 http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0520/2897.html
+
+bug追踪
+http://www.androidweekly.cn/android-dev-weekly-issue-64/
+https://github.com/macroday/AppCrashTracker
