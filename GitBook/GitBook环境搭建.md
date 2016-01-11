@@ -25,15 +25,11 @@
 
 ## 6.GitBook编辑器
 
+- gitbook编辑器简直就是神器，看着官方引导就可以了
 
->本篇内容截取自《》和《》，同时还有亲身实践。
+## 参考教程
 
-
-
-
-gitbook
-https://help.gitbook.com/format/chapters.html
-http://jingyan.baidu.com/article/e8cdb32b33e8f637052bada8.html
-http://4006024680.com/cgi-bin/turbo/admin_web/system/net_detect_2?url=http://dockerpool.com/static/books/gitbook_cn/book/file.html
-
+- [windows下搭建gitbook平台](http://jingyan.baidu.com/article/e8cdb32b33e8f637052bada8.html)
+- [Gitbook 使用入门](http://dockerpool.com/static/books/gitbook_cn/index.html)
+- [GitBook Documentation](https://help.gitbook.com/index.html)
 
