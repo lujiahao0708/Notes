@@ -1,4 +1,6 @@
-My Awesome Book
+笔记
 =======
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+记录一些工作中常见的东西和自己学习的新知识。
+
+Keep it simple，sweetheart。
