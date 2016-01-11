@@ -8,6 +8,7 @@
 * [第四章--Android开发工具](AndroidTools/README.md)
    * [AndroidStudio](AndroidTools/AndroidStudio.md)
         * [AndroidStudio快捷键](AndroidTools/AndroidStudio快捷键.md)
+        * [更改keystore](AndroidTools/更改keystore.md)
 * [第五章--Android开发小知识点](AndroidModelLittel/README.md)
    * [TextView下划线](AndroidModelLittel/TextView下划线.md)
    * [秒转换为时分秒格式](AndroidModelLittel/秒转换为时分秒格式.md)
