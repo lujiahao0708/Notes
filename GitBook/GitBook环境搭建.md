@@ -19,9 +19,9 @@
 
 ## 5.命令
 
-- gitbook init 初始化一本书
-- gitbook build 构建
-- gitbook serve 开启本地服务(打开localhost:4000即可查看)
+- `gitbook init` 初始化一本书
+- `gitbook build` 构建
+- `gitbook serve` 开启本地服务(打开localhost:4000即可查看)
 
 ## 6.GitBook编辑器
 
