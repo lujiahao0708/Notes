@@ -118,3 +118,13 @@ https://codelabs.developers.google.com/
 http://vdisk.weibo.com/s/qz-PU7XfhH5v4
 http://geek.csdn.net/news/detail/50692
 http://design.jobbole.com/115141/
+
+
+http://droidyue.com/blog/2015/06/27/desgign-pattern-observer/
+https://github.com/greenrobot/EventBus
+http://www.androidchina.net/2429.html
+http://a.codekk.com/blogs/detail/54cfab086c4761e5001b2538
+https://bng86.gitbooks.io/android-third-party-/content/eventbus.html
+http://blog.csdn.net/harvic880925/article/details/40660137
+http://blog.csdn.net/harvic880925/article/details/40787203
+http://blog.csdn.net/yuanzeyao/article/details/38174537
