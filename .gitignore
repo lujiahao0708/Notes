@@ -31,3 +31,4 @@ proguard/
 /build
 /.gradle
 /app/*.jks
+/.idea
