@@ -1,1 +1,1 @@
-include ':app', ':topbar'
+include ':app', ':topbar', ':loginqq'
