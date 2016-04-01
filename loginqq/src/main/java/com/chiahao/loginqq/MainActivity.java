@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -30,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         public void handleMessage(Message msg) {
             switch (msg.what) {
                 case SUCCESS:
-                    Toast.makeText(MainActivity.this, (String) msg.obj, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "服务器返回的数据-->"+(String) msg.obj, Toast.LENGTH_SHORT).show();
                     break;
             }
         }
@@ -94,7 +93,6 @@ public class MainActivity extends AppCompatActivity {
                         message.what = SUCCESS;
                         message.obj = result;
                         handler.sendMessage(message);
-                        Log.e("haha", result);
                     }
                 } catch (MalformedURLException e) {
                     e.printStackTrace();
@@ -107,7 +105,6 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * POST方式访问网络
-     * TODO 我写的php后台还不能用  后面慢慢完善  明天先不用这个教她了
      */
     private void doPost() {
         userName = etNamePost.getText().toString().trim();
@@ -125,15 +122,19 @@ public class MainActivity extends AppCompatActivity {
                     conn.setConnectTimeout(5000);
                     // 2.设置http请求数据类型为表单类型
                     conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
-                    // 3.设置给服务器的数据的长度-----即参数
+                    // 3.设置给服务器的数据的长度-----即参数的长度
                     String params = "username=" + URLEncoder.encode(userName, "utf-8") + "&pwd=" + URLEncoder.encode(pwd, "utf-8");
-                    conn.setRequestProperty("Content-Length",String.valueOf(params));
+                    conn.setRequestProperty("Content-Length",String.valueOf(params.length()));// 这里要注意一定要传长度，不然会造成413响应码错误滴
                     // 4.设置服务器可以写入数据
                     conn.setDoOutput(true);
                     // 5.开始向服务器写数据
+                    //DataOutputStream os = new DataOutputStream(conn.getOutputStream());
                     OutputStream os = conn.getOutputStream();
                     os.write(params.getBytes());
+                    os.flush();
+                    os.close();
 
+                    // 413 请求实体过大，超过了服务器响应的能力   params.getBytes()因为使用了这个方法返回的是一个byte数组，这样写道服务器的话会造成413错误
                     // 服务器响应
                     int responseCode = conn.getResponseCode();
                     if (responseCode == 200) {
@@ -152,7 +153,6 @@ public class MainActivity extends AppCompatActivity {
                         message.what = SUCCESS;
                         message.obj = result;
                         handler.sendMessage(message);
-                        Log.e("haha", result);
                     }
                 } catch (MalformedURLException e) {
                     e.printStackTrace();
