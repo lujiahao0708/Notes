@@ -66,16 +66,20 @@ public class MainActivity extends AppCompatActivity {
     private void doGet() {
         userName = etNameGet.getText().toString().trim();
         pwd = etPwdGet.getText().toString().trim();
-        final String server = "http://192.168.199.125:80/LearnPHP/login/GetServer.php";// 访问本机地址需要是静态地址
+        final String server = "http://192.168.173.2:80/LearnPHP/login/GetServer.php";// 访问本机地址需要是静态地址
         new Thread() {
             @Override
             public void run() {
                 try {
+                    // 1.拼接并转换地址
                     String path = server + "?username=" + URLEncoder.encode(userName, "utf-8") + "&pwd=" + URLEncoder.encode(pwd, "utf-8");
                     URL url = new URL(path);
+                    // 2.创建链接
                     HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+                    // 3.设置请求方式和超时时间
                     conn.setRequestMethod("GET");
                     conn.setConnectTimeout(5000);
+
                     int responseCode = conn.getResponseCode();
                     if (responseCode == 200) {
                         InputStream is = conn.getInputStream();
@@ -109,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
     private void doPost() {
         userName = etNamePost.getText().toString().trim();
         pwd = etPwdPost.getText().toString().trim();
-        final String server = "http://192.168.199.125:80/LearnPHP/login/PostServer.php";// 访问本机地址需要是静态地址
+        final String server = "http://192.168.173.2:80/LearnPHP/login/PostServer.php";// 访问本机地址需要是静态地址
         new Thread() {
             @Override
             public void run() {
