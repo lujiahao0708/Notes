@@ -18,7 +18,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".LoadImageActivity" />
-        <activity android:name=".ProgressActivity"></activity>
+        <activity android:name=".ProgressActivity" />
+        <activity android:name=".demo.DemoActivity"></activity>
     </application>
 
 </manifest>

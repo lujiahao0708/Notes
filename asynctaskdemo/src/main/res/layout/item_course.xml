@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/ic_launcher"/>
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_toRightOf="@+id/ivIcon"
+        tools:text="hahahaha"
+        android:textSize="18sp"
+        android:layout_marginLeft="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tvDes"
+        android:layout_below="@+id/tvName"
+        android:layout_toRightOf="@+id/ivIcon"
+        tools:text="hahahaha"
+        android:textSize="14sp"
+        android:layout_marginLeft="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tvLearner"
+        tools:text="1000"
+        android:layout_alignParentRight="true"
+        android:layout_alignBaseline="@+id/tvDes"
+        android:textSize="14sp"
+        android:layout_marginRight="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

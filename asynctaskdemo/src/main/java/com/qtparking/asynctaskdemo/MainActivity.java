@@ -6,19 +6,22 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.qtparking.asynctaskdemo.demo.DemoActivity;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private Button btnLoadImage,btnProgress;
+    private Button btnLoadImage,btnProgress,btnDemo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btnLoadImage = (Button) findViewById(R.id.btnLoadImage);
         btnProgress = (Button) findViewById(R.id.btnProgress);
-
+        btnDemo = (Button) findViewById(R.id.btnDemo);
 
         btnLoadImage.setOnClickListener(this);
         btnProgress.setOnClickListener(this);
+        btnDemo.setOnClickListener(this);
     }
 
     @Override
@@ -29,6 +32,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btnProgress:
                 startActivity(new Intent(this,ProgressActivity.class));
+                break;
+            case R.id.btnDemo:
+                startActivity(new Intent(this,DemoActivity.class));
                 break;
         }
     }
