@@ -1,1 +1,1 @@
-include ':app', ':topbar', ':loginqq'
+include ':topbar', ':loginqq', ':asynctaskdemo'
