@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
 import com.lidroid.xutils.HttpUtils;
 import com.lidroid.xutils.exception.HttpException;
 import com.lidroid.xutils.http.ResponseInfo;
@@ -30,6 +31,7 @@ import java.net.URLEncoder;
 import cz.msebera.android.httpclient.Header;
 
 public class MainActivity extends AppCompatActivity {
+    private static final int FAIL = 2;
     private EditText etNameGet, etPwdGet, etNamePost, etPwdPost;
     private Button btnLoginGet, btnLoginPost;
     private String userName, pwd;
@@ -41,6 +43,9 @@ public class MainActivity extends AppCompatActivity {
             switch (msg.what) {
                 case SUCCESS:
                     Toast.makeText(MainActivity.this, "服务器返回的数据-->" + (String) msg.obj, Toast.LENGTH_SHORT).show();
+                    break;
+                case FAIL:
+                    Toast.makeText(MainActivity.this, (String) msg.obj, Toast.LENGTH_SHORT).show();
                     break;
             }
         }
@@ -108,12 +113,17 @@ public class MainActivity extends AppCompatActivity {
                         baos.close();
                         conn.disconnect();
                         String result = new String(baos.toByteArray(), "utf-8");
+                        // 组拼message对象
                         Message message = Message.obtain();
                         message.what = SUCCESS;
                         message.obj = result;
-                        handler.sendMessage(message);
+                        handler.sendMessage(message);// 发送message对象
                     }
                 } catch (MalformedURLException e) {
+                    Message message = new Message();
+                    message.what = FAIL;
+                    message.obj = "UTL异常";
+                    handler.sendMessage(message);
                     e.printStackTrace();
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -186,7 +196,7 @@ public class MainActivity extends AppCompatActivity {
         userName = etNameGet.getText().toString().trim();
         pwd = etPwdGet.getText().toString().trim();
         String path = "http://192.168.173.2:80/LearnPHP/login/GetServer.php" + "?username=" + userName + "&pwd=" + pwd;
-        AsyncHttpClient client=new AsyncHttpClient();
+        AsyncHttpClient client = new AsyncHttpClient();
         client.get(path, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
@@ -202,14 +212,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void doAsyncPost(){
+    private void doAsyncPost() {
         userName = etNamePost.getText().toString().trim();
         pwd = etPwdPost.getText().toString().trim();
         final String server = "http://192.168.173.2:80/LearnPHP/login/PostServer.php";// 访问本机地址需要是静态地址
-        AsyncHttpClient client=new AsyncHttpClient();
-        RequestParams params=new RequestParams();
-        params.add("username",userName);
-        params.add("pwd",pwd);
+        AsyncHttpClient client = new AsyncHttpClient();
+        RequestParams params = new RequestParams();
+        params.add("username", userName);
+        params.add("pwd", pwd);
         client.post(server, params, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
@@ -225,11 +235,11 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void doXutilsGet(){
+    private void doXutilsGet() {
         userName = etNameGet.getText().toString().trim();
         pwd = etPwdGet.getText().toString().trim();
         String path = "http://192.168.173.2:80/LearnPHP/login/GetServer.php" + "?username=" + userName + "&pwd=" + pwd;
-        HttpUtils utils=new HttpUtils();
+        HttpUtils utils = new HttpUtils();
         utils.send(HttpRequest.HttpMethod.GET, path, new RequestCallBack<String>() {
             @Override
             public void onSuccess(ResponseInfo<String> responseInfo) {
@@ -245,19 +255,19 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void doXutilsPost(){
+    private void doXutilsPost() {
         userName = etNamePost.getText().toString().trim();
         pwd = etPwdPost.getText().toString().trim();
         final String server = "http://192.168.173.2:80/LearnPHP/login/PostServer.php";
-        com.lidroid.xutils.http.RequestParams params=new com.lidroid.xutils.http.RequestParams();
-        params.addBodyParameter("userName",userName);
-        params.addBodyParameter("pwd",pwd);
+        com.lidroid.xutils.http.RequestParams params = new com.lidroid.xutils.http.RequestParams();
+        params.addBodyParameter("userName", userName);
+        params.addBodyParameter("pwd", pwd);
 
-        HttpUtils utils=new HttpUtils();
-        utils.send(HttpRequest.HttpMethod.POST, server, params, new RequestCallBack<Object>() {
+        HttpUtils utils = new HttpUtils();
+        utils.send(HttpRequest.HttpMethod.POST, server, params, new RequestCallBack<String>() {
             @Override
-            public void onSuccess(ResponseInfo<Object> responseInfo) {
-                Toast.makeText(MainActivity.this, "服务器响应成功" + responseInfo.result, Toast.LENGTH_SHORT).show();
+            public void onSuccess(ResponseInfo<String> responseInfo) {
+                parseJson(responseInfo.result);
             }
 
             @Override
@@ -266,6 +276,15 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+    }
+
+    private void parseJson(String result) {
+        Gson gson = new Gson();
+        User user = new User();
+        user = gson.fromJson(result, User.class);
+
+        Toast.makeText(MainActivity.this, "服务器响应成功" + user.getData().getUsername(), Toast.LENGTH_SHORT).show();
 
     }
 

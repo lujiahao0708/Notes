@@ -26,4 +26,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.2.0'
     compile 'com.loopj.android:android-async-http:1.4.9'
     compile files('libs/xUtils-2.6.14.jar')
+    compile 'com.google.code.gson:gson:2.6.2'
 }
