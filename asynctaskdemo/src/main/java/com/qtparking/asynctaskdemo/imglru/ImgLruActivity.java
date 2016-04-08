@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 
@@ -48,6 +49,7 @@ public class ImgLruActivity extends AppCompatActivity implements OnLoadListener<
     @Override
     public void onDataStart() {
         Log.i("mainactivity", "开始异步任务");
+        progressBar.setVisibility(View.VISIBLE);
     }
 
     @Override
@@ -69,11 +71,13 @@ public class ImgLruActivity extends AppCompatActivity implements OnLoadListener<
     @Override
     public void onDataFail(Exception e) {
         Log.i("mainactivity", "异步任务失败");
+        progressBar.setVisibility(View.GONE);
     }
 
     @Override
     public void onDataFinish() {
         Log.i("mainactivity", "结束异步任务");
+        progressBar.setVisibility(View.GONE);
     }
 
     public Bitmap getBitmapFromURL(String urlStr) {
