@@ -19,7 +19,8 @@
         </activity>
         <activity android:name=".LoadImageActivity" />
         <activity android:name=".ProgressActivity" />
-        <activity android:name=".demo.DemoActivity"></activity>
+        <activity android:name=".demo.DemoActivity" />
+        <activity android:name=".imglru.ImgLruActivity"></activity>
     </application>
 
 </manifest>

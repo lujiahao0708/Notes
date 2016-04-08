@@ -25,4 +25,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="实例练习" />
+    <Button
+        android:id="@+id/btnImgLruAsyncTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="使用Lru显示网络图片" />
 </LinearLayout>
