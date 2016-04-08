@@ -6,9 +6,9 @@
 
     <ImageView
         android:id="@+id/ivIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@mipmap/ic_launcher"/>
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@mipmap/ic_launcher"/>
     <TextView
         android:id="@+id/tvName"
         android:layout_toRightOf="@+id/ivIcon"
@@ -24,6 +24,7 @@
         tools:text="hahahaha"
         android:textSize="14sp"
         android:layout_marginLeft="8dp"
+        android:layout_alignBaseline="@+id/ivIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <TextView

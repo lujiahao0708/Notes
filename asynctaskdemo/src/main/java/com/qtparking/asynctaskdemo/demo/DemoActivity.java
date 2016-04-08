@@ -41,7 +41,7 @@ public class DemoActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(List<Course> courseList) {
             super.onPostExecute(courseList);
-            CourseAdapter courseAdapter = new CourseAdapter(DemoActivity.this,courseList);
+            CourseAdapter courseAdapter = new CourseAdapter(DemoActivity.this,courseList,lvCourse);
             lvCourse.setAdapter(courseAdapter);
         }
     }
