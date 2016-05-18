@@ -1,1 +1,1 @@
-include ':topbar', ':loginqq', ':asynctaskdemo'
+include ':topbar', ':loginqq', ':asynctaskdemo', ':volleydemo', 'l_library', 'Volley'
