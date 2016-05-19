@@ -7,3 +7,7 @@
 
 ## 2.AdbIdea
 清理app缓存的插件
+
+## 3.翻译插件
+
+https://github.com/Skykai521/ECTranslation
