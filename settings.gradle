@@ -1,1 +1,1 @@
-include ':topbar', ':loginqq', ':asynctaskdemo', ':volleydemo', 'l_library', 'Volley'
+include ':topbar', ':loginqq', ':asynctaskdemo', ':volleydemo', ':customertab', ':settingitem', 'l_library', 'Volley'
