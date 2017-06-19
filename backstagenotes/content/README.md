@@ -1,0 +1,3 @@
+# Notes
+
+![](img/yasuo.jpg)

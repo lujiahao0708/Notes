@@ -1,0 +1,1 @@
+http://ftp.osuosl.org/pub/funtoo/distfiles/oracle-java/
